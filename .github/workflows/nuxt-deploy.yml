@@ -1,11 +1,11 @@
-name: Deploy Nuxt.js to GitHub Pages
+name: Nuxt.js Deploy
 
 on:
   push:
     branches:
       - main
-    paths:
-      - "frontend/**"
+    # paths:
+    #   - "frontend/**"
 
 
 jobs:

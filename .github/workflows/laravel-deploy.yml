@@ -1,11 +1,11 @@
-name: Build and Deploy Laravel API
+name: Laravel Deploy
 
 on:
   push:
     branches:
       - main
-    paths:
-      - "backend/**"
+    # paths:
+    #   - "backend/**"
     
 
 jobs:
