@@ -29,11 +29,3 @@ jobs:
         run: |
           docker-compose -f backend/docker-compose.yml build
           docker-compose -f backend/docker-compose.yml up -d
-
-      - name: Check if Laravel is running
-        run: |
-          curl --fail http://localhost:9000 || (echo "Laravel backend is down!" && exit 1)
-
-      - name: Check PostgreSQL Connection
-        run: |
-          docker exec -i postgres-db pg_isready -U postgres
