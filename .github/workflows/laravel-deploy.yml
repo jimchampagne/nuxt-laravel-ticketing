@@ -1,4 +1,4 @@
-name: Laravel Deploy
+name: Deploy Backend
 
 on:
   push:
@@ -21,5 +21,6 @@ jobs:
 
       - name: Build Laravel Docker container
         run: |
+          cd backend
           docker-compose -f backend/docker-compose.yml build
           docker-compose -f backend/docker-compose.yml up -d
