@@ -18,15 +18,18 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      # Pick your own package manager and build script
-      - run: |
+
+      - name: Install dependencies
+        run: |
           cd frontend
           bun install
           bun x nuxt build --preset github_pages
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./frontend/.output/public
+
   # Deployment job
   deploy:
     # Add a dependency to the build job
