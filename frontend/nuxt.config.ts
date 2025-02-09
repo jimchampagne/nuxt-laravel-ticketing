@@ -37,14 +37,29 @@ export default defineNuxtConfig({
       ],
     },
   },
+  modules: [
+    '@nuxt/icon',
+    'nuxt-auth-sanctum'
+  ],
+  sanctum: {
+    baseUrl: 'http://localhost:8000',
+    mode: 'token',
+    endpoints: {
+      'csrf': '/sanctum/csrf-cookie',
+      'login': '/api/login',
+      'logout': '/api/logout',
+      'user': '/api/user',
+    },
+    redirect: {
+      onLogin: '/dashboard',
+      onLogout: '/login',
+    }
+  },
   runtimeConfig: {
     public: {
       apiBase: 'http://localhost:8000/api'
     }
   },
-  modules: [
-    '@nuxt/icon',
-  ],
   css: ['~/assets/css/app.css'],
   vite: {
     plugins: [
