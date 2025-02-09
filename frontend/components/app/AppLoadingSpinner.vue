@@ -15,12 +15,10 @@ const sizeClasses = computed(() => {
 </script>
 
 <template>
-  <div>
-    <div
-      :class="[sizeClasses]"
-      class="spinner inline-block border-white border-t-primary rounded-full border-solid"
-    />
-  </div>
+  <div
+    :class="[sizeClasses]"
+    class="spinner inline-block border-white border-t-primary rounded-full border-solid"
+  />
 </template>
 
 <style scoped>

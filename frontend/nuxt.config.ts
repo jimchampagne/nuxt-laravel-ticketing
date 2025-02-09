@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite"
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   ssr: false,
-  devtools: { 
+  devtools: {
     enabled: true,
     vscode: {
       enabled: true,
@@ -12,17 +12,17 @@ export default defineNuxtConfig({
     componentInspector: true,
     timeline: {
       enabled: true,
-    }
+    },
   },
   nitro: {
     compressPublicAssets: {
       brotli: true,
-    }
+    },
   },
   imports: {
     dirs: [
       'composables/**',
-    ]
+    ],
   },
   app: {
     head: {
@@ -40,26 +40,26 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/icon',
     '@nuxt/fonts',
-    'nuxt-auth-sanctum'
+    'nuxt-auth-sanctum',
   ],
   sanctum: {
     baseUrl: 'http://localhost:8000',
     mode: 'token',
     endpoints: {
-      'csrf': '/sanctum/csrf-cookie',
-      'login': '/api/login',
-      'logout': '/api/logout',
-      'user': '/api/user',
+      csrf: '/sanctum/csrf-cookie',
+      login: '/api/login',
+      logout: '/api/logout',
+      user: '/api/user',
     },
     redirect: {
       onLogin: '/dashboard',
       onLogout: '/',
-    }
+    },
   },
   runtimeConfig: {
     public: {
-      apiBase: 'http://localhost:8000/api'
-    }
+      apiBase: 'http://localhost:8000/api',
+    },
   },
   css: ['~/assets/css/app.css'],
   fonts: {
@@ -78,12 +78,12 @@ export default defineNuxtConfig({
         provider: 'google',
         weights: [400, 500, 600, 700, 800],
         styles: ['italic', 'normal'],
-      }
-    ]
+      },
+    ],
   },
   vite: {
     plugins: [
       tailwindcss(),
-    ]
-  }
+    ],
+  },
 })

@@ -1,15 +1,15 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-title: 'Raleway', sans-serif;
   --font-body: 'Poppins', sans-serif;
 
   --color-*: initial;
-  --color-dark: #28262C;
-  --color-primary: #D4C2FC;
-  --color-secondary: #998FC7;
-  --color-white: #F9F5FF;
-  --color-red: #FF0000;
+  --color-dark: #28262c;
+  --color-primary: #d4c2fc;
+  --color-secondary: #998fc7;
+  --color-white: #f9f5ff;
+  --color-red: #ff0000;
   --color-transparent: transparent;
 }
 
@@ -26,15 +26,15 @@ a {
 }
 
 h1 {
-  @apply text-2xl
+  @apply text-2xl;
 }
 
 h2 {
-  @apply text-xl
+  @apply text-xl;
 }
 
 h3 {
-  @apply text-lg
+  @apply text-lg;
 }
 
 button {
@@ -52,4 +52,3 @@ button {
 .error-message {
   @apply text-red text-sm mb-4 text-center;
 }
-

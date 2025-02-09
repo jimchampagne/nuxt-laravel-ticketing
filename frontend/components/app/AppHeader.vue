@@ -12,7 +12,9 @@ async function unauthenticate() {
       <div class="rounded-full p-1 w-8 h-8 flex items-center justify-center bg-secondary">
         <Icon name="lucide:user" class="text-primary fill-current" />
       </div>
-      <p class="text-sm text-primary">Jim Champagne</p>
+      <p class="text-sm text-primary">
+        Jim Champagne
+      </p>
     </div>
     <button class=" flex group items-center justify-center rounded-full w-8 h-8 bg-secondary ease-in-out duration-200" @click="unauthenticate()">
       <Icon name="lucide:log-out" class="fill-current text-primary group-hover:text-dark ease-in-out duration-200" />

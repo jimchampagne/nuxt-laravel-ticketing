@@ -1,6 +1,6 @@
 export async function useApiFetch<T>(
   path: string | (() => string),
-  options?: any
+  options?: any,
 ) {
   const { apiBase } = useRuntimeConfig().public
 

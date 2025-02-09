@@ -1,6 +1,6 @@
 export async function useApiOFetch(
   path: string,
-  options: any
+  options: any,
 ) {
   const { apiBase } = useRuntimeConfig().public
 
