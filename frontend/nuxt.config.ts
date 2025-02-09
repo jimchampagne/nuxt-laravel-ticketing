@@ -39,6 +39,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/icon',
+    '@nuxt/fonts',
     'nuxt-auth-sanctum'
   ],
   sanctum: {
@@ -61,6 +62,25 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/app.css'],
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+    },
+    families: [
+      {
+        name: 'Poppins',
+        provider: 'google',
+        weights: [400, 500, 600, 700, 800],
+        styles: ['italic', 'normal'],
+      },
+      {
+        name: 'Raleway',
+        provider: 'google',
+        weights: [400, 500, 600, 700, 800],
+        styles: ['italic', 'normal'],
+      }
+    ]
+  },
   vite: {
     plugins: [
       tailwindcss(),
