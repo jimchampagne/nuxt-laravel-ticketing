@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="relative min-h-screen flex flex-col overflow-hidden">
+  <div class="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden">
     <slot />
   </div>
 </template>

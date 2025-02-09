@@ -3,17 +3,11 @@ definePageMeta({
   layout: 'default',
   middleware: ['sanctum:auth']
 })
-
-const { logout } = useSanctumAuth()
-
-async function unauthenticate() {
-  await logout()
-}
 </script>
 
 <template>
-  <div>
-    <button @click="unauthenticate()">Logout</button>
+  <div class="p-8">
+    <p>Tickets</p>
   </div>
 </template>
 

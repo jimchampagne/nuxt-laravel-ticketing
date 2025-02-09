@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     },
     redirect: {
       onLogin: '/dashboard',
-      onLogout: '/login',
+      onLogout: '/',
     }
   },
   runtimeConfig: {

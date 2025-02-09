@@ -9,7 +9,8 @@
   --color-indigo: #998FC7;
   --color-indigo-light: #D4C2FC;
   --color-magnolia: #F9F5FF;
-  --color-blue: #14248A;
+  --color-red: #FF0000;
+  --color-transparent: transparent;
 }
 
 html {
@@ -17,5 +18,38 @@ html {
 }
 
 body {
-  @apply font-body;
+  @apply font-body bg-raisin text-magnolia;
 }
+
+a {
+  @apply text-indigo hover:text-indigo-light ease-in-out duration-150;
+}
+
+h1 {
+  @apply text-2xl
+}
+
+h2 {
+  @apply text-xl
+}
+
+h3 {
+  @apply text-lg
+}
+
+button {
+  @apply p-2 bg-indigo text-magnolia rounded-lg hover:bg-indigo-light cursor-pointer ease-in-out duration-150;
+}
+
+.form-group {
+  @apply flex flex-1 flex-col w-full;
+
+  input {
+    @apply p-2 border border-indigo rounded-lg hover:bg-magnolia/20 ease-in-out duration-150 text-[12px];
+  }
+}
+
+.error-message {
+  @apply text-red text-sm mb-4 text-center;
+}
+

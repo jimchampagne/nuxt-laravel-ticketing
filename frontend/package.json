@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.25",
-    "nuxt-auth-sanctum": "^0.5.4"
+    "nuxt-auth-sanctum": "^0.5.4",
+    "typescript": "^5.7.3"
   }
 }
