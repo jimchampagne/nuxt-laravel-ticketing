@@ -18,7 +18,7 @@ const sizeClasses = computed(() => {
   <div>
     <div
       :class="[sizeClasses]"
-      class="spinner inline-block border-magnolia border-t-indigo-light rounded-full border-solid"
+      class="spinner inline-block border-white border-t-primary rounded-full border-solid"
     />
   </div>
 </template>

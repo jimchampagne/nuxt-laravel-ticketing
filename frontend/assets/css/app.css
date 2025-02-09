@@ -5,10 +5,10 @@
   --font-body: 'Poppins', sans-serif;
 
   --color-*: initial;
-  --color-raisin: #28262C;
-  --color-indigo: #998FC7;
-  --color-indigo-light: #D4C2FC;
-  --color-magnolia: #F9F5FF;
+  --color-dark: #28262C;
+  --color-primary: #D4C2FC;
+  --color-secondary: #998FC7;
+  --color-white: #F9F5FF;
   --color-red: #FF0000;
   --color-transparent: transparent;
 }
@@ -18,11 +18,11 @@ html {
 }
 
 body {
-  @apply font-body bg-raisin text-magnolia;
+  @apply font-body bg-dark text-white;
 }
 
 a {
-  @apply text-indigo hover:text-indigo-light ease-in-out duration-150;
+  @apply text-secondary hover:text-primary ease-in-out duration-150;
 }
 
 h1 {
@@ -38,14 +38,14 @@ h3 {
 }
 
 button {
-  @apply p-2 bg-indigo text-magnolia rounded-lg hover:bg-indigo-light cursor-pointer ease-in-out duration-150;
+  @apply p-2 bg-secondary text-white rounded-lg hover:bg-primary cursor-pointer ease-in-out duration-150;
 }
 
 .form-group {
   @apply flex flex-1 flex-col w-full;
 
   input {
-    @apply p-2 border border-indigo rounded-lg hover:bg-magnolia/20 ease-in-out duration-150 text-[12px];
+    @apply p-2 border border-secondary rounded-lg hover:bg-white/20 ease-in-out duration-150 text-[12px];
   }
 }
 

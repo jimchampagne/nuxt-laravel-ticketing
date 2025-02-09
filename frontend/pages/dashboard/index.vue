@@ -6,7 +6,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="p-8 text-indigo-light">
+  <div class="p-8 text-primary">
     <p>Dashboard</p>
   </div>
 </template>

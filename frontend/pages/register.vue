@@ -37,8 +37,8 @@ async function registerUser() {
 </script>
 
 <template>
-  <div class="p-12 bg-magnolia rounded-[5px] flex flex-col items-center max-w-[320px] text-raisin">
-    <Icon name="lucide:notebook-pen" class="!w-[40px] !h-[40px] mb-[1rem] text-indigo fill-current" />
+  <div class="p-12 bg-white rounded-[5px] flex flex-col items-center max-w-[320px] text-dark">
+    <Icon name="lucide:notebook-pen" class="!w-[40px] !h-[40px] mb-[1rem] text-secondary fill-current" />
     <h1 class="text-center font-title mb-1 font-bold">NuxtTicket</h1>
     <h2 class="text-center font-title mb-8">Create your account</h2>
     <form class="w-full mb-4" @submit.prevent="registerUser">
