@@ -11,5 +11,6 @@ declare global {
     status: string
     created_at: Date
     updated_at: Date
+    boards: Board[]
   }
 }

@@ -7,5 +7,6 @@ declare global {
     project_id: number
     created_at: Date
     updated_at: Date
+    tickets: Ticket[]
   }
 }

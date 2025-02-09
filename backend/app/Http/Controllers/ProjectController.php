@@ -15,7 +15,8 @@ class ProjectController extends Controller implements HasMiddleware
      */
 
 
-    public static function middleware() {
+    public static function middleware()
+    {
         return [
             new Middleware('auth:sanctum', except: ['index', 'show']),
         ];
@@ -23,14 +24,14 @@ class ProjectController extends Controller implements HasMiddleware
 
     public function index()
     {
-        return Project::all();
+        return Project::with(['boards.tickets'])->get();
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request, Project $project)
-    {        
+    {
         $fields = $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -58,7 +59,7 @@ class ProjectController extends Controller implements HasMiddleware
     public function update(Request $request, Project $project)
     {
         Gate::authorize('modify', $project);
-        
+
         $fields = $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -80,7 +81,7 @@ class ProjectController extends Controller implements HasMiddleware
         Gate::authorize('modify', $project);
 
         $project->delete();
-        
+
         return response('Post was deleted', 204);
     }
 }

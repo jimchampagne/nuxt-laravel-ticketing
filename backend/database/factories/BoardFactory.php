@@ -3,21 +3,18 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Board;
+use App\Models\Project;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Board>
- */
 class BoardFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = Board::class;
+
     public function definition(): array
     {
         return [
-            //
+            'project_id' => Project::factory(), // Assign board to a project
+            'title' => fake()->word(),
         ];
     }
 }

@@ -15,7 +15,8 @@ class TicketController extends Controller implements HasMiddleware
      * Display a listing of the resource.
      */
 
-    public static function middleware() {
+    public static function middleware()
+    {
         return [
             new Middleware('auth:sanctum', except: ['index', 'show']),
         ];
@@ -29,23 +30,23 @@ class TicketController extends Controller implements HasMiddleware
     /**
      * Store a newly created resource in storage.
      */
-public function store(Request $request, Board $board)
-{
-    // Ensure the authenticated user owns the board and it belongs to the project
-    $board = $request->user()->projects()->findOrFail($board->project_id)->boards()->findOrFail($board->id);
+    public function store(Request $request, Board $board)
+    {
+        // Ensure the authenticated user owns the board and it belongs to the project
+        $board = $request->user()->projects()->findOrFail($board->project_id)->boards()->findOrFail($board->id);
 
-    // Validate the ticket data
-    $fields = $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'nullable|string',
-        'status' => 'required|string|in:open,closed,in-progress',
-    ]);
+        // Validate the ticket data
+        $fields = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'status' => 'required|string|in:open,closed,in-progress',
+        ]);
 
-    // Create the ticket under the board
-    $ticket = $board->tickets()->create($fields);
+        // Create the ticket under the board
+        $ticket = $board->tickets()->create($fields);
 
-    return response()->json($ticket, 201);
-}
+        return response()->json($ticket, 201);
+    }
 
     /**
      * Display the specified resource.
@@ -81,7 +82,7 @@ public function store(Request $request, Board $board)
     public function destroy(Request $request, Ticket $ticket)
     {
         Gate::authorize('modify', $ticket);
-        
+
         $ticket->delete();
 
         return response('Ticket was deleted', 204);
