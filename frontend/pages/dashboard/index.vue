@@ -16,9 +16,9 @@ const { data: Projects } = await useApiFetch<Project[]>('/projects')
       </div>
       <div class="flex gap-4 max-w-[calc(100vw-235px)] overflow-x-scroll overflow-hidden rounded-xl py-4">
         <div v-for="board in project.boards" :key="board.id"
-          class="min-w-md p-6 rounded-xl bg-dark border border-solid border-primary overflow-y-scroll min-h-[520px] h-[520px]">
+          class="min-w-md p-6 rounded-xl bg-dark border border-solid border-primary">
           <h2 class="mb-4 text-primary w-full font-semibold">{{ board.title }}</h2>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 overflow-y-scroll min-h-[520px] h-[520px]">
             <div v-for="ticket in board.tickets" :key="ticket.id">
               <div
                 class="rounded-md p-4 bg-dark text-primary shadow-xl border border-solid border-primary hover:text-dark hover:bg-primary ease-in-out duration-150 cursor-pointer">
