@@ -8,8 +8,10 @@ const { data: Tickets } = await useApiFetch('/tickets')
 </script>
 
 <template>
-  <div class="p-8">
-    <p>Tickets</p>
+  <div class="overflow-hidden">
+    <h2 class="font-bold mb-8">
+      Tickets
+    </h2>
     <pre>
       {{ Tickets }}
     </pre>
