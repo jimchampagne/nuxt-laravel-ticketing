@@ -7,7 +7,7 @@ const props = defineProps<{
 <template v-if="tickets">
   <div v-for="ticket in props.tickets" :key="ticket.id">
     <div
-      class="rounded-md p-4 bg-dark text-primary shadow-xl border border-solid border-primary hover:text-dark hover:bg-primary ease-in-out duration-150 cursor-pointer"
+      class="rounded-md p-4 bg-dark shadow-xl border border-solid border-primary hover:text-dark hover:bg-primary ease-in-out duration-150 cursor-pointer"
     >
       <div class="flex items-start justify-between mb-2 gap-4">
         <p class="font-semibold">
@@ -18,7 +18,9 @@ const props = defineProps<{
         <Icon v-if="ticket.status === 'closed'" name="lucide:circle-x" class="!h-[24px] !w-[24px]" />
       </div>
       <div>
-        <p>{{ ticket.description }}</p>
+        <p class="text-white">
+          {{ ticket.description }}
+        </p>
       </div>
     </div>
   </div>

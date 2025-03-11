@@ -7,7 +7,8 @@ const props = defineProps<{
 <template v-if="boards">
   <div
     v-for="board in props.boards" :key="board.id"
-    class="min-w-md p-6 rounded-xl bg-dark border border-solid border-primary"
+    class="min-w-md p-6 rounded-xl border-[2px] border-grey border-solid hover:border-primary transition
+    duration-250 bg-linear-to-b from-grad-grey-1/50 to-grad-grey-2/50"
   >
     <h2 class="mb-4 text-primary w-full font-semibold">
       {{ board.title }}

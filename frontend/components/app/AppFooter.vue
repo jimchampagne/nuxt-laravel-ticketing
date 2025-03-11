@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="h-[48px] border-t-[2px] border-solid border-secondary/20 flex justify-center items-center px-4 gap-4 text-secondary/20 text-[12px]">
+  <div class="min-h-[48px] border-t-[2px] border-solid border-primary/20 flex flex-col sm:flex-row justify-center items-center p-4 gap-4 text-primary text-[12px]">
     <p class="hover:text-secondary ease-in-out duration-150 cursor-pointer">
       © 2025 - Jim Champagne
     </p>

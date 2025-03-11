@@ -8,7 +8,7 @@ const { data: projects } = await useApiFetch<Project[]>('/projects')
 </script>
 
 <template>
-  <div class="p-8 text-primary">
+  <div class="text-primary">
     <DashboardProject :projects="projects" />
   </div>
 </template>
